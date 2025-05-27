@@ -1,0 +1,235 @@
+html {
+    scroll-behavior: smooth;     /* Défilement fluide entre les pages */
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to top, #0a2342, #0b3c5d, #235aa6);
+    min-height: 100vh;
+    /* taille de ma page */
+}
+
+header {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    position: relative;
+    z-index: 2;
+    /* devant le reste */
+}
+
+.floguitaille {
+    width: auto;
+    height: 5%;
+}
+
+.floguimax {
+    position: absolute;
+    width: 25%;
+    bottom: 0;
+    right: 5px;
+    transition: 3s;
+
+}
+
+.floguimax:hover {
+    transform: translateX(-100vw);
+    /* Merci à Joël pour m'avoir aidé à faire cet animation  */
+    transition: 3s;
+}
+
+img {
+    width: 100%;
+}
+
+.centre {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+}
+
+.tt {
+    display: flex;
+    justify-content: center;
+}
+
+.ttt {
+    display: flex;
+    justify-content: center;
+    font-weight: bold; /* test en bold */
+}
+
+a {
+    text-decoration: none; /* sans soulignement au balise a */
+    color: white; 
+}
+
+header>div {
+    font-size: 22px;
+    position: relative;
+}
+
+.gauche {
+    display: flex;
+    justify-content: center;
+}
+
+.gap {
+    padding: 3px;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: auto;
+    background: rgb(0, 5, 148);
+    border-radius: 5px;
+    padding: 12px 24px;
+    transform: translateY(-20px); 
+    opacity: 0; /* apparait pas */
+    pointer-events: none; /* la souris reste de base */
+    transition: 0.2s; /* transition lors de l'ouverture et la fermeture du menu pour que ce sois fluide */
+    transition-delay: 0.2s;
+}
+
+header>div:hover>.menu {
+    transform: translateY(0);
+    opacity: 1; /* apparait lors du clic */
+    transition-delay: 0s;
+    pointer-events: initial; 
+    color: white;
+}
+
+.tout {
+    position: relative;
+}
+
+.video-background {
+    width: 100%;
+    opacity: 10%;
+}
+
+.video-background video {
+    width: 100%;
+    object-fit: cover; /* adapte la vidéo sans déformation */
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: white solid 4px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+form {
+    margin: auto;
+    background-color: #ddd;
+    padding: 16px 32px;
+    border-radius: 8px;
+    width: fit-content; /* prend la taille du contenu */
+}
+
+.form_elt {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form_elt>label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+
+.form_elt>.form_elt2 {
+    flex-direction: column; 
+    gap: 0px;
+    width: 100%;
+}
+
+.resultat {
+    margin-top: 8px;
+    font-size: 24px;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.valid {
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    background-color: #09c;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 8px;
+    cursor: pointer;
+    width: 100%
+}
+
+.erreur {
+    background: #ff8080;
+    border: 2px solid #c00 !important;
+    color: #000;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: rgb(0, 190, 204);
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px 30px;
+    width: fit-content;
+}
+
+.nom {
+    padding-left: 140px;
+    color: white;
+}
+
+.modele {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 6px 12px;
+    margin: 6px auto;
+    color: white;
+}
+
+.modele div {
+    margin: 0;
+}
+
+.vu {
+    margin: 30px;
+    padding: 20px;
+    color: white
+}
+
+.vue {
+    padding: 15px;
+}
+
+.hidden {
+    display: none;
+}
