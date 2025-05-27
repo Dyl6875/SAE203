@@ -84,5 +84,3 @@ foreach ($modeles as $m) {
 
 </body>
 </html>
-
-<div></div>
